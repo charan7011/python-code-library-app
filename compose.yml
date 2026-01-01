@@ -25,7 +25,7 @@ services:
   borrow_service:
     image: borrowimage
     ports:
-      -"5003:5003"
+      - "5003:5003"
     deploy:
       replicas: 3
 
