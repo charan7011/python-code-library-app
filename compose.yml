@@ -1,14 +1,14 @@
 ---
 services:
   db:
-    image: dbimage
+    image: charan7011/webapp:dbimage
     ports:
       - "3306:3306"
     deploy:
       replicas: 3
 
   auth_service:
-    image: authimage
+    image: charan7011/webapp:authimage
     ports:
       - "5001:5001"
     deploy:
@@ -16,21 +16,21 @@ services:
 
 
   book_service:
-    image: bookimage
+    image: charan7011/webapp:bookimage
     ports:
       - "5002:5002"
     deploy:
       replicas: 3
 
   borrow_service:
-    image: borrowimage
+    image: charan7011/webapp:borrowimage
     ports:
       - "5003:5003"
     deploy:
       replicas: 3
 
   frontend:
-    image: frontendimage
+    image: charan7011/webapp:frontendimage
     ports:
       - "5000:5000"
     deploy:
